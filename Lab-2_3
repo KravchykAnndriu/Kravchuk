@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+#include < locale.h >
+
+
+int main() {
+
+  int x, y;
+  float a;
+
+  // Введення
+  printf("Zadaite dva ciluh chusla:\n");
+  printf("\nVvedit chuslo x: ");
+  scanf("%d", &x);
+  printf("Vvedit chuslo y: ");
+  scanf("%d", &y);
+
+  // Обчислення
+  a = (x*y + 2*x - pow(y, x)) / (sin(x) + x*y - 2*x + y);
+
+  // Виведення
+  printf("\nRezultat:\n");
+  printf("Chuslo x = %d\n", x);
+  printf("Chuslo y = %d\n", y);
+  printf("\nVidpovid: a = %.2f\n", a);
+
+  return 0;
+}
