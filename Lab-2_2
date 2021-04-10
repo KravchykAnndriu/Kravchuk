@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+  const float a = 25;
+  const float b = -2;
+  const float c = 4;
+  float y;
+
+  // Обчислення
+  y = ((a*b*c + a*b - (2*a + c)) / (2*a*(b-c))) - (a/5);
+  printf("Rezyltat:\n");
+  printf("a = %.f\n", a);
+  printf("b = %.f\n", b);
+  printf("c = %.f\n\n", c);
+  printf("Vidpovid: ");
+  printf("y = %.2f\n", y);
+  return 0;
+}
