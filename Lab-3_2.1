@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+  float a, b, c;
+  // Введення
+  printf("VvedIt tri dIysnih chisla:\n\n");
+  printf("VvedIt pershe chislo: ");
+  scanf("%f", &a);
+  printf("VvedIt druge chislo: ");
+  scanf("%f", &b);
+  printf("VvedIt tretE chislo: ");
+  scanf("%f", &c);
+
+  // Обчислення
+  if ((a<b) && (b<c)) {
+    a *= 2;
+    b *= 2;
+    c *= 2;
+    printf("\nChisla vvedenI za zrostannyam\n");
+    printf("PodvoEnI chisla: %.2f, %.2f, %.2f\n", a, b, c);
+  }
+  else if ((a>b) && (b>c)){
+    a = pow(a, -1);
+    b = pow(b, -1);
+    c = pow(c, -1);
+    printf("\nChisla vvedenI za spadannyam\n");
+    printf("ObernenI chisla: %.2f, %.2f, %.2f\n", a, b, c);
+
+  }
+  else {
+    printf("\nVi vveli nepravilnI znachennya (chisla povinnI buti zadanI v spadayochomu abo zrostayochomu poryadku)\n");
+  }
+  return 0;
+}
