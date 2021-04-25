@@ -1,0 +1,90 @@
+#include <stdio.h>
+#include <stdlib.h> // Для функції exit
+#include <math.h>
+#include <locale.h>
+
+int main() {
+  int b,c, mtd;
+  float result;
+
+  printf("Yak vi hochite vikonati programu?\n\n");
+  printf("Z vikoristannyam skorochenoYi formi operatora rozgaluzhennya if - 1\n");
+  printf("Z vikoristannyam povnoYi formi operatora rozgaluzhennya if ... else abo za neobhIdnostI vkladennya if...else if - 2\n");
+  printf("Vvesti: ");
+  scanf("%d", &mtd);
+
+  // Перевірка правильності вибору методу
+  if ((mtd != 1) && (mtd != 2)) {
+    printf("\nVi vveli nekorektne znachennya! \n");
+    exit(0);
+  }
+
+
+  // Введення данних
+  printf("\nVvedIt dva tsIlih chisla:\n");
+  printf("\nVvedIt b: ");
+  scanf("%d", &b);
+  printf("VvedIt c: ");
+  scanf("%d", &c);
+
+
+  // З використанням скороченої форми
+  if (mtd == 1) {
+    if (c == 5) {
+      if ((b<0) || (c<0)) {
+        printf("Vi vveli nepravilnI znachennya (vikonuEt dobuvannya korenya z vId'Emnogo chisla)\n");
+      }
+      else {
+        result = (float) sqrt(b) + 2*sqrt(c);
+        printf("Rezultat: %.2f", result);
+      }
+    }
+    if (c == 0) {
+      if (c + 6 == 0) {
+        printf("Vi vveli nepravilnI znachennya (vikonuEt dIlennya na 0)\n");
+      }
+      else {
+        result = (float) b / (c+6);
+        printf("Rezultat: %.2f", result);
+      }
+    }
+    if (c == -5) {
+      result = (float) b + 12*pow(c, 3);
+      printf("Rezultat: %.2f", result);
+    }
+    if ((c != 5) && (c != 0) && (c != -5)) {
+      printf("\nVi vveli NEKOREKTNE chislo c ");
+    }
+  }
+  // З використанням повної форми
+  else {
+    if (c == 5) {
+      if ((b<0) || (c<0)) {
+        printf("Vi vveli nepravilnI znachennya (vikonuEt dobuvannya korenya z vId'Emnogo chisla)\n");
+      }
+      else {
+        result = (float) sqrt(b) + 2*sqrt(c);
+        printf("Rezultat: %.2f", result);
+      }
+    }
+    else if (c == 0) {
+      if (c + 6 == 0) {
+        printf("Vi vveli nepravilnI znachennya (vikonuEt dIlennya na 0)\n");
+      }
+      else {
+        result = (float) b / (c+6);
+        printf("Rezultat: %.2f", result);
+      }
+    }
+    else if (c == -5) {
+      result = (float) b + 12*pow(c, 3);
+      printf("Rezultat: %.2f", result);
+    }
+    else {
+      printf("\nVi vveli NEKOREKTNE chislo c ");
+    }
+  }
+
+
+  return 0;
+}
