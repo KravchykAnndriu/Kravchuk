@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h> // Для функції exit
 #include <math.h>
-#include <locale.h>
 
 int main() {
   int b,c, mtd;
