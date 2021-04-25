@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+  int x, y, z;
+  float a;
+  // Введення
+  printf("VvedIt tri tsIlih chisla:\n");
+  printf("\nVvedIt chislo x: ");
+  scanf("%d", &x);
+  printf("\nVvedIt chislo y: ");
+  scanf("%d", &y);
+  printf("\nVvedIt chislo z: ");
+  scanf("%d", &z);
+
+  // Обчислення
+  if (pow(x, 2) * y - z < 0) {
+    printf("\nVi vveli nekorektnI znachennya (vikonuEtsya dobuvannya korenya z vId'Emnogo chisla)\n");
+  }
+  else if (x + y + z <= 0) {
+    printf("\nVi vveli nekorektnI znachennya (vikonuEtsya logarifmuvannya vId'Emnogo chisla)\n");
+  }
+  else {
+    a = sqrt(pow(x, 2) * y - z) + log2(x+y+z);
+    printf("\nRezultat: %.2f\n", a);
+  }
+  return 0;
+}
